@@ -1,382 +1,108 @@
-### Bandit 0:
-
-Apenas usar SSH para entrar no servidor
-
-pass: bandit0
-
-```
-ssh bandit0@bandit.labs.overthewire.org -p 2220
-```
-
-### Bandit 1:
-
-pass: boJ9jbbUNNfktd78OOpsqOltutMc3MY1
-
-```
-cat readme
-```
-
-### Bandit 2:
-
-pass: CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
-
-```
-cat ./-
-```
-
-### Bandit 3:
-
-pass: UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK
-
-```
-cat ./spaces\ in\ this\ filename
-```
-
-### Bandit 4:
-
-pass: pIwrPrtPN36QITSp3EQaw936yaFoFgAB
-
-```
-cat inhere/.hidden
-```
-
-### Bandit 5:
-
-pass: koReBOKuIDDepwhWk7jZC0RTdopnAYKh
-
-```
-strings ./*
-```
-
-### Bandit 6:
-
-pass: DXjZPULLxYr17uwoI01bNLQbtFemEgo7
-
-```
-grep -R "" .
-```
-
-### Bandit 7:
-
-pass: HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs
-
-```
-find / -group bandit6 -user bandit7
-
-cat /var/lib/dpkg/info/bandit7.password
-```
-
-### Bandit 8:
-
-pass: cvX2JJa4CFALtqS87jk27qwqGhBM9plV
-
-```
-cat data.txt | grep millionth
-```
-
-### Bandit 9:
-
-pass: UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
-
-```
-sort data.txt | uniq -c
-```
-
-### Bandit 10:
-
-pass: truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk
-
-```
-strings data.txt | grep ==
-```
-
-#### Fun thing:
-
-```
-2========== the
-========== password
-========== isa
-========== truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk
-```
-
-### Bandit 11:
-
-pass: IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR
-
-```
-cat data.txt | base64 -d
-```
-
-### Bandit 12:
-
-pass: 5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu
-
-`
-11.py
-`
-
-### Bandit 13:
-
-pass: 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL
-
-```
-mkdir /tmp/olivato
-
-cp ./data.txt /tmp/olivato
-
-xxd -r data.txt > file1
-
-file file1
-
-mv file1 file1.gz
-
-gunzip file1.gz
-
-file file1
-
-tar -jxvf file1
-
-file ...
-```
-
-### Bandit 14:
-
-pass: 4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e
-
-```
-ssh bandit14@localhost -i ssh.private
-```
-
-### Bandit 15:
-
-pass: BfMYroe26WYalil77FoDi9qh59eK5xNr
-
-```
-telnet localhost 30000
-send bandit14 pass
-```
-
-### Bandit 16:
-
-pass: cluFn7wTiGryunymYOu4RcffSxQluehd
-
-```
-openssl s_client -connect localhost:30001
-send bandit 15 pass
-```
-
-### Bandit 17:
-
-pass:
-```
------BEGIN RSA PRIVATE KEY-----
-MIIEogIBAAKCAQEAvmOkuifmMg6HL2YPIOjon6iWfbp7c3jx34YkYWqUH57SUdyJ
-imZzeyGC0gtZPGujUSxiJSWI/oTqexh+cAMTSMlOJf7+BrJObArnxd9Y7YT2bRPQ
-Ja6Lzb558YW3FZl87ORiO+rW4LCDCNd2lUvLE/GL2GWyuKN0K5iCd5TbtJzEkQTu
-DSt2mcNn4rhAL+JFr56o4T6z8WWAW18BR6yGrMq7Q/kALHYW3OekePQAzL0VUYbW
-JGTi65CxbCnzc/w4+mqQyvmzpWtMAzJTzAzQxNbkR2MBGySxDLrjg0LWN6sK7wNX
-x0YVztz/zbIkPjfkU1jHS+9EbVNj+D1XFOJuaQIDAQABAoIBABagpxpM1aoLWfvD
-KHcj10nqcoBc4oE11aFYQwik7xfW+24pRNuDE6SFthOar69jp5RlLwD1NhPx3iBl
-J9nOM8OJ0VToum43UOS8YxF8WwhXriYGnc1sskbwpXOUDc9uX4+UESzH22P29ovd
-d8WErY0gPxun8pbJLmxkAtWNhpMvfe0050vk9TL5wqbu9AlbssgTcCXkMQnPw9nC
-YNN6DDP2lbcBrvgT9YCNL6C+ZKufD52yOQ9qOkwFTEQpjtF4uNtJom+asvlpmS8A
-vLY9r60wYSvmZhNqBUrj7lyCtXMIu1kkd4w7F77k+DjHoAXyxcUp1DGL51sOmama
-+TOWWgECgYEA8JtPxP0GRJ+IQkX262jM3dEIkza8ky5moIwUqYdsx0NxHgRRhORT
-8c8hAuRBb2G82so8vUHk/fur85OEfc9TncnCY2crpoqsghifKLxrLgtT+qDpfZnx
-SatLdt8GfQ85yA7hnWWJ2MxF3NaeSDm75Lsm+tBbAiyc9P2jGRNtMSkCgYEAypHd
-HCctNi/FwjulhttFx/rHYKhLidZDFYeiE/v45bN4yFm8x7R/b0iE7KaszX+Exdvt
-SghaTdcG0Knyw1bpJVyusavPzpaJMjdJ6tcFhVAbAjm7enCIvGCSx+X3l5SiWg0A
-R57hJglezIiVjv3aGwHwvlZvtszK6zV6oXFAu0ECgYAbjo46T4hyP5tJi93V5HDi
-Ttiek7xRVxUl+iU7rWkGAXFpMLFteQEsRr7PJ/lemmEY5eTDAFMLy9FL2m9oQWCg
-R8VdwSk8r9FGLS+9aKcV5PI/WEKlwgXinB3OhYimtiG2Cg5JCqIZFHxD6MjEGOiu
-L8ktHMPvodBwNsSBULpG0QKBgBAplTfC1HOnWiMGOU3KPwYWt0O6CdTkmJOmL8Ni
-blh9elyZ9FsGxsgtRBXRsqXuz7wtsQAgLHxbdLq/ZJQ7YfzOKU4ZxEnabvXnvWkU
-YOdjHdSOoKvDQNWu6ucyLRAWFuISeXw9a/9p7ftpxm0TSgyvmfLF2MIAEwyzRqaM
-77pBAoGAMmjmIJdjp+Ez8duyn3ieo36yrttF5NSsJLAbxFpdlc1gvtGCWW+9Cq0b
-dxviW8+TFVEBl1O4f7HVm6EpTscdDxU+bCXWkfjuRb7Dy9GOtt9JPsX8MBTakzh3
-vBgsyi/sN3RqRBcGU40fOoZyfAMT8s1m/uYv52O6IgeuZ/ujbjY=
------END RSA PRIVATE KEY-----
-```
-
-```
-nmap -p 31000-32000
-openssl s_client -connect localhost:OPEN_PORT
-send bandit16 password
-```
-
-### Bandit 18:
-
-pass: kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd
-
-```
-diff passwords.old passwords.new
-```
-
-### Bandit 19:
-
-pass: IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x
-
-```
-ssh bandit18@bandit.labs.overthewire.org -p 2220 cat readme
-```
-
-### Bandit 20:
-
-pass: GbKksEFF4yrVs6il55v6gwY5aVje5f0j
-
-```
-./bandit20-do cat /etc/bandit_pass/bandit20
-```
-
-### Bandit 21:
-
-pass: gE269g2h3mw3pwgrj0Ha9Uoqen1c9DGr
-
-```
-nc -lvp 30004 (^Z)
-bg
-./suconnect 30004 (^Z)
-fg 1
-send bandit20 pass
-```
-
-### Bandit 22:
-
-pass: Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI
-
-```
-cat /etc/cron.d/cronjob_bandit22
-
-/usr/bin/cronjob_bandit22.sh
-
-cat /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
-```
-
-### Bandit 23:
-
-pass: jc1udXuA1tiHqjIsL8yaapX5XIAI6i0n
-
-```
-cat /usr/bin/cronjob_bandit23.sh
-
-mytarget=$(echo I am user bandit23 | md5sum | cut -d ' ' -f 1)
-
-cat /tmp/$mytarget
-```
-
-### Bandit 24:
-
-pass: UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ
-
-```
-cd /var/spool/bandit24
-
-create file
-```
-#!/bin/bash
-
-nc localhost 30004 < /etc/bandit_pass/bandit24
-
-```
-
-reverse shell
-
-nc -lvp 30004
-
-wait
-```
-
-### Bandit 25
-
-pass: uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG
-
-```
-25.py
-
-nc localhost 30002 < wordlist
-```
-
-### Bandit 26
-
-pass: 5czgV9L3Xx8JPOyRbXh6lQbmIOWvPT6Z
-
-```
-exploitin more window size and vim command exec
-```
-
-### Bandit 27
-
-pass: 3ba3118a22e93127a4ed485be72ef5ea
-
-```
-open vim in more
-
-:set shell=/bin/bash
-
-:shell
-
-./bandit27-do cat /etc/bandit_pass/bandit27
-```
-
-### Bandit 28
-
-pass: 0ef186ac70e04ea33b4c1853d2526fa2
-
-```
-git clone ssh://bandit27-git@bandit.labs.overthewire.org:2220/home/bandit27-git/repo
-
-bandit 27 pass
-```
-
-### Bandit 29
-
-pass: bbc96594b4e001778eee9975372716b2
-
-```
-very basic git knowledge
-```
-
-### Bandit 30
-
-pass: 5b90576bedb2cc04c86a9e924ce42faf
-
-```
-very basic git knowledge
-```
-
-### Bandit 31
-
-pass: 47e603bb428404d265f59c42920d81e5
-
-```
-secret in git tag
-```
-
-### Bandit 32
-
-pass: 56a9bf19c63d650ce78e6ec0354ee45e
-
-```
-basic git knowledge
-```
-
-### Bandit 33
-
-pass: c9c3199ddf4121b10cf581a98d51caee
-
-```
-from bash manual: $0 invokes tha shell
-```
-
-### Bandit 34
-
-```
-Congratulations on solving the last level of this game!
-
-At this moment, there are no more levels to play in this game. However, we are constantly working
-on new levels and will most likely expand this game with more levels soon.
-Keep an eye out for an announcement on our usual communication channels!
-In the meantime, you could play some of our other wargames.
-
-If you have an idea for an awesome new level, please let us know!
-```
+IyMjIEJhbmRpdCAwOgoKQXBlbmFzIHVzYXIgU1NIIHBhcmEgZW50cmFyIG5vIHNlcnZpZG9yCgpw
+YXNzOiBiYW5kaXQwCgpgYGAKc3NoIGJhbmRpdDBAYmFuZGl0LmxhYnMub3ZlcnRoZXdpcmUub3Jn
+IC1wIDIyMjAKYGBgCgojIyMgQmFuZGl0IDE6CgpwYXNzOiBib0o5amJiVU5OZmt0ZDc4T09wc3FP
+bHR1dE1jM01ZMQoKYGBgCmNhdCByZWFkbWUKYGBgCgojIyMgQmFuZGl0IDI6CgpwYXNzOiBDVjFE
+dHFYV1ZGWFR2TTJGMGswOVNIejBZd1JJTllBOQoKYGBgCmNhdCAuLy0KYGBgCgojIyMgQmFuZGl0
+IDM6CgpwYXNzOiBVbUhhZFFjbFdtZ2RMT0tRM1lOZ2pXeEdvUk1iNWx1SwoKYGBgCmNhdCAuL3Nw
+YWNlc1wgaW5cIHRoaXNcIGZpbGVuYW1lCmBgYAoKIyMjIEJhbmRpdCA0OgoKcGFzczogcEl3clBy
+dFBOMzZRSVRTcDNFUWF3OTM2eWFGb0ZnQUIKCmBgYApjYXQgaW5oZXJlLy5oaWRkZW4KYGBgCgoj
+IyMgQmFuZGl0IDU6CgpwYXNzOiBrb1JlQk9LdUlERGVwd2hXazdqWkMwUlRkb3BuQVlLaAoKYGBg
+CnN0cmluZ3MgLi8qCmBgYAoKIyMjIEJhbmRpdCA2OgoKcGFzczogRFhqWlBVTEx4WXIxN3V3b0kw
+MWJOTFFidEZlbUVnbzcKCmBgYApncmVwIC1SICIiIC4KYGBgCgojIyMgQmFuZGl0IDc6CgpwYXNz
+OiBIS0JQVEtRbklheTRGdzc2YkV5OFBWeEtFRFFSS1R6cwoKYGBgCmZpbmQgLyAtZ3JvdXAgYmFu
+ZGl0NiAtdXNlciBiYW5kaXQ3CgpjYXQgL3Zhci9saWIvZHBrZy9pbmZvL2JhbmRpdDcucGFzc3dv
+cmQKYGBgCgojIyMgQmFuZGl0IDg6CgpwYXNzOiBjdlgySkphNENGQUx0cVM4N2prMjdxd3FHaEJN
+OXBsVgoKYGBgCmNhdCBkYXRhLnR4dCB8IGdyZXAgbWlsbGlvbnRoCmBgYAoKIyMjIEJhbmRpdCA5
+OgoKcGFzczogVXN2VnlGU2ZaWldiaTZ3Z0M3ZEFGeUZ1UjZqUVFVaFIKCmBgYApzb3J0IGRhdGEu
+dHh0IHwgdW5pcSAtYwpgYGAKCiMjIyBCYW5kaXQgMTA6CgpwYXNzOiB0cnVLTGRqc2JKNWc3eXlK
+MlgyUjBvM2E1SFFKRnVMawoKYGBgCnN0cmluZ3MgZGF0YS50eHQgfCBncmVwID09CmBgYAoKIyMj
+IyBGdW4gdGhpbmc6CgpgYGAKMj09PT09PT09PT0gdGhlCj09PT09PT09PT0gcGFzc3dvcmQKPT09
+PT09PT09PSBpc2EKPT09PT09PT09PSB0cnVLTGRqc2JKNWc3eXlKMlgyUjBvM2E1SFFKRnVMawpg
+YGAKCiMjIyBCYW5kaXQgMTE6CgpwYXNzOiBJRnVrd0tHc0ZXOE1PcTNJUkZxcnhFMWh4VE5FYlVQ
+UgoKYGBgCmNhdCBkYXRhLnR4dCB8IGJhc2U2NCAtZApgYGAKCiMjIyBCYW5kaXQgMTI6CgpwYXNz
+OiA1VGU4WTRkcmdDUmZDeDh1Z2R3dUVYOEtGQzZrMkVVdQoKYAoxMS5weQpgCgojIyMgQmFuZGl0
+IDEzOgoKcGFzczogOFpqeUNSaUJXRllrbmVhaEh3eEN2M3diMmExT1JwWUwKCmBgYApta2RpciAv
+dG1wL29saXZhdG8KCmNwIC4vZGF0YS50eHQgL3RtcC9vbGl2YXRvCgp4eGQgLXIgZGF0YS50eHQg
+PiBmaWxlMQoKZmlsZSBmaWxlMQoKbXYgZmlsZTEgZmlsZTEuZ3oKCmd1bnppcCBmaWxlMS5negoK
+ZmlsZSBmaWxlMQoKdGFyIC1qeHZmIGZpbGUxCgpmaWxlIC4uLgpgYGAKCiMjIyBCYW5kaXQgMTQ6
+CgpwYXNzOiA0d2NZVUpGdzBrMFhMU2hsRHp6dG5UQkhpcXhVM2IzZQoKYGBgCnNzaCBiYW5kaXQx
+NEBsb2NhbGhvc3QgLWkgc3NoLnByaXZhdGUKYGBgCgojIyMgQmFuZGl0IDE1OgoKcGFzczogQmZN
+WXJvZTI2V1lhbGlsNzdGb0RpOXFoNTllSzV4TnIKCmBgYAp0ZWxuZXQgbG9jYWxob3N0IDMwMDAw
+CnNlbmQgYmFuZGl0MTQgcGFzcwpgYGAKCiMjIyBCYW5kaXQgMTY6CgpwYXNzOiBjbHVGbjd3VGlH
+cnl1bnltWU91NFJjZmZTeFFsdWVoZAoKYGBgCm9wZW5zc2wgc19jbGllbnQgLWNvbm5lY3QgbG9j
+YWxob3N0OjMwMDAxCnNlbmQgYmFuZGl0IDE1IHBhc3MKYGBgCgojIyMgQmFuZGl0IDE3OgoKcGFz
+czoKYGBgCi0tLS0tQkVHSU4gUlNBIFBSSVZBVEUgS0VZLS0tLS0KTUlJRW9nSUJBQUtDQVFFQXZt
+T2t1aWZtTWc2SEwyWVBJT2pvbjZpV2ZicDdjM2p4MzRZa1lXcVVINTdTVWR5SgppbVp6ZXlHQzBn
+dFpQR3VqVVN4aUpTV0kvb1RxZXhoK2NBTVRTTWxPSmY3K0JySk9iQXJueGQ5WTdZVDJiUlBRCkph
+Nkx6YjU1OFlXM0ZabDg3T1JpTytyVzRMQ0RDTmQybFV2TEUvR0wyR1d5dUtOMEs1aUNkNVRidEp6
+RWtRVHUKRFN0Mm1jTm40cmhBTCtKRnI1Nm80VDZ6OFdXQVcxOEJSNnlHck1xN1Eva0FMSFlXM09l
+a2VQUUF6TDBWVVliVwpKR1RpNjVDeGJDbnpjL3c0K21xUXl2bXpwV3RNQXpKVHpBelF4TmJrUjJN
+Qkd5U3hETHJqZzBMV042c0s3d05YCngwWVZ6dHovemJJa1BqZmtVMWpIUys5RWJWTmorRDFYRk9K
+dWFRSURBUUFCQW9JQkFCYWdweHBNMWFvTFdmdkQKS0hjajEwbnFjb0JjNG9FMTFhRllRd2lrN3hm
+VysyNHBSTnVERTZTRnRoT2FyNjlqcDVSbEx3RDFOaFB4M2lCbApKOW5PTThPSjBWVG91bTQzVU9T
+OFl4RjhXd2hYcmlZR25jMXNza2J3cFhPVURjOXVYNCtVRVN6SDIyUDI5b3ZkCmQ4V0VyWTBnUHh1
+bjhwYkpMbXhrQXRXTmhwTXZmZTAwNTB2azlUTDV3cWJ1OUFsYnNzZ1RjQ1hrTVFuUHc5bkMKWU5O
+NkREUDJsYmNCcnZnVDlZQ05MNkMrWkt1ZkQ1MnlPUTlxT2t3RlRFUXBqdEY0dU50Sm9tK2Fzdmxw
+bVM4QQp2TFk5cjYwd1lTdm1aaE5xQlVyajdseUN0WE1JdTFra2Q0dzdGNzdrK0RqSG9BWHl4Y1Vw
+MURHTDUxc09tYW1hCitUT1dXZ0VDZ1lFQThKdFB4UDBHUkorSVFrWDI2MmpNM2RFSWt6YThreTVt
+b0l3VXFZZHN4ME54SGdSUmhPUlQKOGM4aEF1UkJiMkc4MnNvOHZVSGsvZnVyODVPRWZjOVRuY25D
+WTJjcnBvcXNnaGlmS0x4ckxndFQrcURwZlpueApTYXRMZHQ4R2ZRODV5QTdobldXSjJNeEYzTmFl
+U0RtNzVMc20rdEJiQWl5YzlQMmpHUk50TVNrQ2dZRUF5cEhkCkhDY3ROaS9Gd2p1bGh0dEZ4L3JI
+WUtoTGlkWkRGWWVpRS92NDViTjR5Rm04eDdSL2IwaUU3S2FzelgrRXhkdnQKU2doYVRkY0cwS255
+dzFicEpWeXVzYXZQenBhSk1qZEo2dGNGaFZBYkFqbTdlbkNJdkdDU3grWDNsNVNpV2cwQQpSNTdo
+SmdsZXpJaVZqdjNhR3dId3ZsWnZ0c3pLNnpWNm9YRkF1MEVDZ1lBYmpvNDZUNGh5UDV0Smk5M1Y1
+SERpClR0aWVrN3hSVnhVbCtpVTdyV2tHQVhGcE1MRnRlUUVzUnI3UEovbGVtbUVZNWVUREFGTUx5
+OUZMMm05b1FXQ2cKUjhWZHdTazhyOUZHTFMrOWFLY1Y1UEkvV0VLbHdnWGluQjNPaFlpbXRpRzJD
+ZzVKQ3FJWkZIeEQ2TWpFR09pdQpMOGt0SE1Qdm9kQndOc1NCVUxwRzBRS0JnQkFwbFRmQzFIT25X
+aU1HT1UzS1B3WVd0ME82Q2RUa21KT21MOE5pCmJsaDllbHlaOUZzR3hzZ3RSQlhSc3FYdXo3d3Rz
+UUFnTEh4YmRMcS9aSlE3WWZ6T0tVNFp4RW5hYnZYbnZXa1UKWU9kakhkU09vS3ZEUU5XdTZ1Y3lM
+UkFXRnVJU2VYdzlhLzlwN2Z0cHhtMFRTZ3l2bWZMRjJNSUFFd3l6UnFhTQo3N3BCQW9HQU1tam1J
+SmRqcCtFejhkdXluM2llbzM2eXJ0dEY1TlNzSkxBYnhGcGRsYzFndnRHQ1dXKzlDcTBiCmR4dmlX
+OCtURlZFQmwxTzRmN0hWbTZFcFRzY2REeFUrYkNYV2tmanVSYjdEeTlHT3R0OUpQc1g4TUJUYWt6
+aDMKdkJnc3lpL3NOM1JxUkJjR1U0MGZPb1p5ZkFNVDhzMW0vdVl2NTJPNklnZXVaL3VqYmpZPQot
+LS0tLUVORCBSU0EgUFJJVkFURSBLRVktLS0tLQpgYGAKCmBgYApubWFwIC1wIDMxMDAwLTMyMDAw
+Cm9wZW5zc2wgc19jbGllbnQgLWNvbm5lY3QgbG9jYWxob3N0Ok9QRU5fUE9SVApzZW5kIGJhbmRp
+dDE2IHBhc3N3b3JkCmBgYAoKIyMjIEJhbmRpdCAxODoKCnBhc3M6IGtmQmYzZVlrNUJQQlJ6d2px
+dXRiYmZFODg3U1ZjNVlkCgpgYGAKZGlmZiBwYXNzd29yZHMub2xkIHBhc3N3b3Jkcy5uZXcKYGBg
+CgojIyMgQmFuZGl0IDE5OgoKcGFzczogSXVla3NTN1ViaDhHM0RDd1Z6clRkOHJBVk93cTNNNXgK
+CmBgYApzc2ggYmFuZGl0MThAYmFuZGl0LmxhYnMub3ZlcnRoZXdpcmUub3JnIC1wIDIyMjAgY2F0
+IHJlYWRtZQpgYGAKCiMjIyBCYW5kaXQgMjA6CgpwYXNzOiBHYktrc0VGRjR5clZzNmlsNTV2Nmd3
+WTVhVmplNWYwagoKYGBgCi4vYmFuZGl0MjAtZG8gY2F0IC9ldGMvYmFuZGl0X3Bhc3MvYmFuZGl0
+MjAKYGBgCgojIyMgQmFuZGl0IDIxOgoKcGFzczogZ0UyNjlnMmgzbXczcHdncmowSGE5VW9xZW4x
+YzlER3IKCmBgYApuYyAtbHZwIDMwMDA0ICheWikKYmcKLi9zdWNvbm5lY3QgMzAwMDQgKF5aKQpm
+ZyAxCnNlbmQgYmFuZGl0MjAgcGFzcwpgYGAKCiMjIyBCYW5kaXQgMjI6CgpwYXNzOiBZazdvd0dB
+Y1dqd01WUndyVGVzSkV3QjdXVk9pSUxMSQoKYGBgCmNhdCAvZXRjL2Nyb24uZC9jcm9uam9iX2Jh
+bmRpdDIyCgovdXNyL2Jpbi9jcm9uam9iX2JhbmRpdDIyLnNoCgpjYXQgL3RtcC90N082bGRzOVMw
+UnFRaDlhTWN6NlNocEFvWktGN2ZndgpgYGAKCiMjIyBCYW5kaXQgMjM6CgpwYXNzOiBqYzF1ZFh1
+QTF0aUhxaklzTDh5YWFwWDVYSUFJNmkwbgoKYGBgCmNhdCAvdXNyL2Jpbi9jcm9uam9iX2JhbmRp
+dDIzLnNoCgpteXRhcmdldD0kKGVjaG8gSSBhbSB1c2VyIGJhbmRpdDIzIHwgbWQ1c3VtIHwgY3V0
+IC1kICcgJyAtZiAxKQoKY2F0IC90bXAvJG15dGFyZ2V0CmBgYAoKIyMjIEJhbmRpdCAyNDoKCnBh
+c3M6IFVvTVlUcmZyQkZIeVFYbWc2Z3pjdHFBd09tdzFJb2haCgpgYGAKY2QgL3Zhci9zcG9vbC9i
+YW5kaXQyNAoKY3JlYXRlIGZpbGUKYGBgCiMhL2Jpbi9iYXNoCgpuYyBsb2NhbGhvc3QgMzAwMDQg
+PCAvZXRjL2JhbmRpdF9wYXNzL2JhbmRpdDI0CgpgYGAKCnJldmVyc2Ugc2hlbGwKCm5jIC1sdnAg
+MzAwMDQKCndhaXQKYGBgCgojIyMgQmFuZGl0IDI1CgpwYXNzOiB1Tkc5TzU4Z1VFN3NudWtmM2J2
+WjByeGh0bmp6U0d6RwoKYGBgCjI1LnB5CgpuYyBsb2NhbGhvc3QgMzAwMDIgPCB3b3JkbGlzdApg
+YGAKCiMjIyBCYW5kaXQgMjYKCnBhc3M6IDVjemdWOUwzWHg4SlBPeVJiWGg2bFFibUlPV3ZQVDZa
+CgpgYGAKZXhwbG9pdGluIG1vcmUgd2luZG93IHNpemUgYW5kIHZpbSBjb21tYW5kIGV4ZWMKYGBg
+CgojIyMgQmFuZGl0IDI3CgpwYXNzOiAzYmEzMTE4YTIyZTkzMTI3YTRlZDQ4NWJlNzJlZjVlYQoK
+YGBgCm9wZW4gdmltIGluIG1vcmUKCjpzZXQgc2hlbGw9L2Jpbi9iYXNoCgo6c2hlbGwKCi4vYmFu
+ZGl0MjctZG8gY2F0IC9ldGMvYmFuZGl0X3Bhc3MvYmFuZGl0MjcKYGBgCgojIyMgQmFuZGl0IDI4
+CgpwYXNzOiAwZWYxODZhYzcwZTA0ZWEzM2I0YzE4NTNkMjUyNmZhMgoKYGBgCmdpdCBjbG9uZSBz
+c2g6Ly9iYW5kaXQyNy1naXRAYmFuZGl0LmxhYnMub3ZlcnRoZXdpcmUub3JnOjIyMjAvaG9tZS9i
+YW5kaXQyNy1naXQvcmVwbwoKYmFuZGl0IDI3IHBhc3MKYGBgCgojIyMgQmFuZGl0IDI5CgpwYXNz
+OiBiYmM5NjU5NGI0ZTAwMTc3OGVlZTk5NzUzNzI3MTZiMgoKYGBgCnZlcnkgYmFzaWMgZ2l0IGtu
+b3dsZWRnZQpgYGAKCiMjIyBCYW5kaXQgMzAKCnBhc3M6IDViOTA1NzZiZWRiMmNjMDRjODZhOWU5
+MjRjZTQyZmFmCgpgYGAKdmVyeSBiYXNpYyBnaXQga25vd2xlZGdlCmBgYAoKIyMjIEJhbmRpdCAz
+MQoKcGFzczogNDdlNjAzYmI0Mjg0MDRkMjY1ZjU5YzQyOTIwZDgxZTUKCmBgYApzZWNyZXQgaW4g
+Z2l0IHRhZwpgYGAKCiMjIyBCYW5kaXQgMzIKCnBhc3M6IDU2YTliZjE5YzYzZDY1MGNlNzhlNmVj
+MDM1NGVlNDVlCgpgYGAKYmFzaWMgZ2l0IGtub3dsZWRnZQpgYGAKCiMjIyBCYW5kaXQgMzMKCnBh
+c3M6IGM5YzMxOTlkZGY0MTIxYjEwY2Y1ODFhOThkNTFjYWVlCgpgYGAKZnJvbSBiYXNoIG1hbnVh
+bDogJDAgaW52b2tlcyB0aGEgc2hlbGwKYGBgCgojIyMgQmFuZGl0IDM0CgpgYGAKQ29uZ3JhdHVs
+YXRpb25zIG9uIHNvbHZpbmcgdGhlIGxhc3QgbGV2ZWwgb2YgdGhpcyBnYW1lIQoKQXQgdGhpcyBt
+b21lbnQsIHRoZXJlIGFyZSBubyBtb3JlIGxldmVscyB0byBwbGF5IGluIHRoaXMgZ2FtZS4gSG93
+ZXZlciwgd2UgYXJlIGNvbnN0YW50bHkgd29ya2luZwpvbiBuZXcgbGV2ZWxzIGFuZCB3aWxsIG1v
+c3QgbGlrZWx5IGV4cGFuZCB0aGlzIGdhbWUgd2l0aCBtb3JlIGxldmVscyBzb29uLgpLZWVwIGFu
+IGV5ZSBvdXQgZm9yIGFuIGFubm91bmNlbWVudCBvbiBvdXIgdXN1YWwgY29tbXVuaWNhdGlvbiBj
+aGFubmVscyEKSW4gdGhlIG1lYW50aW1lLCB5b3UgY291bGQgcGxheSBzb21lIG9mIG91ciBvdGhl
+ciB3YXJnYW1lcy4KCklmIHlvdSBoYXZlIGFuIGlkZWEgZm9yIGFuIGF3ZXNvbWUgbmV3IGxldmVs
+LCBwbGVhc2UgbGV0IHVzIGtub3chCmBgYAo=
